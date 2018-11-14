@@ -1,14 +1,53 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}Homepage{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+  <link href="css/flexslider.css" rel="stylesheet" />
+  <link href="css/prettyPhoto.css" rel="stylesheet" />
+  <link href="css/camera.css" rel="stylesheet" />
+  <link href="css/jquery.bxslider.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!-- Theme skin -->
+  <link href="color/default.css" rel="stylesheet" />
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+  <link rel="shortcut icon" href="ico/favicon.png" />
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div id="wrapper">
+        {{ include('_includes/header.html.twig') }}
 
-<div class="example-wrapper">
-    {{ knp_menu_render('mainMenu') }}
-</div>
+        {{ render(controller(
+            'App\\Controller\\ArticleController::featuredArticles',
+            { 'max': 3 }
+        )) }}
+
+        <section id="content">
+            <div class="container">
+                {{ include('_includes/features.html.twig') }}
+                <div class="row">
+                    <div class="span12">
+                        <div class="solidline"></div>
+                    </div>
+                </div>
+                {{ include('_includes/pricing.html.twig') }}
+
+                {{ include('_includes/saying_aboutus.html.twig') }}
+            </div>
+        </section>
+
+        <!-- recent work -->
+        {{ include('_includes/recent_work.html.twig') }}
+
+        <!-- footer -->
+        {{ include('_includes/footer.html.twig') }}
+    </div>
 {% endblock %}

@@ -3,10 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <!-- css -->
+        {% block stylesheets %}
+            <!--<link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans:300,400,600,700,800" rel="stylesheet">-->
+            <link href="css/bootstrap.css" rel="stylesheet" />
+            <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <!-- javascript -->
+        {% block javascripts %}
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="js/jquery.js"></script>
+            <script src="js/jquery.easing.1.3.js"></script>
+            <script src="js/bootstrap.js"></script>
+
+            <script src="js/modernizr.custom.js"></script>
+            <script src="js/toucheffects.js"></script>
+            <script src="js/google-code-prettify/prettify.js"></script>
+            <script src="js/jquery.bxslider.min.js"></script>
+            <script src="js/camera/camera.js"></script>
+            <script src="js/camera/setting.js"></script>
+
+            <script src="js/jquery.prettyPhoto.js"></script>
+            <script src="js/portfolio/jquery.quicksand.js"></script>
+            <script src="js/portfolio/setting.js"></script>
+
+            <script src="js/jquery.flexslider.js"></script>
+            <script src="js/animate.js"></script>
+            <script src="js/inview.js"></script>
+        {% endblock %}
     </body>
 </html>

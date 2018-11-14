@@ -40,4 +40,15 @@ class ArticleController extends AbstractController
             array('articles' => $articleRepository->findAll())
         );
     }
+
+    public function featuredArticles($max = 3, ArticleRepository $articleRepository)
+    {
+        // make a database call or other logic
+        // to get the "$max" most recent articles
+
+        return $this->render(
+            'article/_featured_article.html.twig',
+            array('articles' => $articleRepository->findAll())
+        );
+    }
 }
