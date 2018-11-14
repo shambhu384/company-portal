@@ -13,6 +13,7 @@ class Builder implements ContainerAwareInterface
     public function mainMenu(FactoryInterface $factory)
     {
         $menu = $factory->createItem('root');
+        $menu->setChildrenAttribute('class', 'nav navbar-nav');
 
         $menu->addChild('Home', ['route' => 'homepage']);
 
@@ -22,9 +23,10 @@ class Builder implements ContainerAwareInterface
         ]);
 
         // create another menu item
+        $menu->addChild('Services', ['route' => 'services']);
         $menu->addChild('About Me', ['route' => 'about']);
         // you can also add sub levels to your menus as follows
-        $menu['About Me']->addChild('Edit profile', ['route' => 'edit_profile']);
+       // $menu['About Me']->addChild('Edit profile', ['route' => 'edit_profile']);
 
         // ... add more children
 

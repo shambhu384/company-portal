@@ -38,3 +38,10 @@ services:
         factory: ['@app.menu_builder', 'mainMenu']
         tags:
             - { name: knp_menu.menu, alias: mainMenu }
+
+
+    app.menu.voter.request:
+        class: App\Menu\RequestVoter
+        arguments: ['@request_stack']
+        tags:
+            - { name: knp_menu.voter }
