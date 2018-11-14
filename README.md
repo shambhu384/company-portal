@@ -1,6 +1,6 @@
-# company-portal
-Symfony WebApp for Company Portal
+# Symfony WebApp for Company Portal
 
+```
 git clone https://github.com/shambhu384/company-portal.git
 
 cp company-portal
@@ -16,3 +16,4 @@ bin/console doctrine:migrations:migrate
 bin/console doctrine:fixtures:load
 
 bin/console server:run
+```
