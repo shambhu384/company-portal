@@ -25,7 +25,7 @@
             <div class="menu_section">
                 <h3>Menu</h3>
                 <ul class="nav side-menu">
-                    <li><a href="{{ path('app_dashboard') }}"><i class="fa fa-home"></i> Dashboard</a></li>
+                    <li><a href="{{ path('admin_dashboard') }}"><i class="fa fa-home"></i> Dashboard</a></li>
                 </ul>
             </div>
 
@@ -37,11 +37,10 @@
                         <ul class="nav child_menu">
                             <li><a class="symfony-docs" href="http://symfony.com/doc/current/index.html">Symfony</a></li>
                         </ul>
-                    </li> 
-                    <li><a href="{{ path('app_gentelella', {page: 'index'}) }}"><i class="fa fa-search"></i> Template</a></li>               
-                </ul>                    
+                    </li>
+                    <li><a href="{{ path('admin_dashboard', {page: 'index'}) }}"><i class="fa fa-search"></i> Template</a></li>
+                </ul>
             </div>
-            
         </div>
         <!-- /sidebar menu -->
 
