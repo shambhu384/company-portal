@@ -6,12 +6,11 @@
  */
 
 // any CSS you require will output into a single css file (app.css in this case)
-require('../css/app.css');
+//require('../css/app.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 // var $ = require('jquery');
 
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
 
 const $ = require('jquery');
 
@@ -21,7 +20,6 @@ var $collectionHolder;
 var $addNewItem = $('<a href="#" class="btn btn-info">Add new item</a>');
 // when the page is loaded and ready
 
-    alert('sdfs');
     // get the collectionHolder, initilize the var by getting the list;
     $collectionHolder = $('#exp_list');
     // append the add new item link to the collectionHolder
